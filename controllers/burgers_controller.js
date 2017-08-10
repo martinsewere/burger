@@ -31,7 +31,8 @@ router.put("/:id", function(req, res) {
 
   console.log("state", state);
 
-  burger.update({devoured: req.body.devoured}, state, function() {
+  burger.update({
+    devoured: req.body.devoured}, state, function() {
     res.redirect("/");
   });
 });
